@@ -38,7 +38,7 @@ cc_library(
     deps = [
         ":qt_gui",
         ":qt_qml",
-        ":qt_qml_models",
+        # ":qt_qml_models",
     ],
 )
 
