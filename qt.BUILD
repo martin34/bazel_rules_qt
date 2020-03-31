@@ -5,7 +5,7 @@ cc_library(
     hdrs = glob(["QtCore/**"]),
     includes = ["."],
     linkopts = [
-        "-lQt5Core",
+        # "-lQt5Core",
     ],
 )
 
@@ -14,7 +14,7 @@ cc_library(
     hdrs = glob(["QtNetwork/**"]),
     includes = ["."],
     linkopts = [
-        "-lQt5Network",
+        # "-lQt5Network",
     ],
 )
 
@@ -23,9 +23,19 @@ cc_library(
     hdrs = glob(["QtWidgets/**"]),
     includes = ["."],
     linkopts = [
-        "-lQt5Widgets",
+        # "-lQt5Widgets",
     ],
     deps = [":qt_core", ":qt_gui"],
+)
+
+cc_library(
+    name = "qt_charts",
+    hdrs = glob(["QtCharts/**"]),
+    includes = ["."],
+    linkopts = [
+        # "-lQt5Charts",
+    ],
+    deps = [":qt_core"],
 )
 
 cc_library(
@@ -33,7 +43,7 @@ cc_library(
     hdrs = glob(["QtQuick/**"]),
     includes = ["."],
     linkopts = [
-        "-lQt5Quick",
+        # "-lQt5Quick",
     ],
     deps = [
         ":qt_gui",
@@ -47,7 +57,7 @@ cc_library(
     hdrs = glob(["QtQml/**"]),
     includes = ["."],
     linkopts = [
-        "-lQt5Qml",
+        # "-lQt5Qml",
     ],
     deps = [
         ":qt_core",
@@ -58,7 +68,7 @@ cc_library(
 cc_library(
     name = "qt_qml_models",
     linkopts = [
-        "-lQt5QmlModels",
+        # "-lQt5QmlModels",
     ],
     hdrs = glob(
         ["QtQmlModels/**"],
@@ -71,7 +81,7 @@ cc_library(
     hdrs = glob(["QtGui/**"]),
     includes = ["."],
     linkopts = [
-        "-lQt5Gui",
+        # "-lQt5Gui",
     ],
     deps = [":qt_core"],
 )
@@ -80,7 +90,7 @@ cc_library(
     name = "qt_opengl",
     hdrs = glob(["QtOpenGL/**"]),
     includes = ["."],
-    linkopts = ["-lQt5OpenGL"],
+    # linkopts = ["-lQt5OpenGL"],
 )
 
 cc_library(
@@ -100,18 +110,18 @@ cc_library(
         "Qt3DRender/**",
     ]),
     includes = ["."],
-    linkopts = [
-        "-lQt53DAnimation",
-        "-lQt53DCore",
-        "-lQt53DExtras",
-        "-lQt53DInput",
-        "-lQt53DLogic",
-        "-lQt53DQuick",
-        "-lQt53DQuickAnimation",
-        "-lQt53DQuickExtras",
-        "-lQt53DQuickInput",
-        "-lQt53DQuickRender",
-        "-lQt53DQuickScene2D",
-        "-lQt53DRender",
-    ],
+    # linkopts = [
+    #     "-lQt53DAnimation",
+    #     "-lQt53DCore",
+    #     "-lQt53DExtras",
+    #     "-lQt53DInput",
+    #     "-lQt53DLogic",
+    #     "-lQt53DQuick",
+    #     "-lQt53DQuickAnimation",
+    #     "-lQt53DQuickExtras",
+    #     "-lQt53DQuickInput",
+    #     "-lQt53DQuickRender",
+    #     "-lQt53DQuickScene2D",
+    #     "-lQt53DRender",
+    # ],
 )
