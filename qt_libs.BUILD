@@ -6,7 +6,7 @@ cc_library(
 )
 cc_library(
     name = "qt_lib_core",
-    srcs = ["libQt5Core.so.5","libQt5Core.so", "libicui18n.so.60", "libicui18n.so.60.2", "libicuuc.so.60", "libicuuc.so.60.2", "libicudata.so.60", "libicudata.so.60.2",]
+    srcs = ["libQt5Core.so.5","libQt5Core.so", "libicui18n.so.56", "libicui18n.so.56.1", "libicuuc.so.56", "libicuuc.so.56.1", "libicudata.so.56", "libicudata.so.56.1",]
 )
 cc_library(
     name = "qt_lib_widget",
@@ -15,5 +15,5 @@ cc_library(
 )
 cc_library(
     name = "qt_lib_gui",
-    srcs = ["libQt5Gui.so"]
+    srcs = ["libQt5Gui.so",],
 )
